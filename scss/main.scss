@@ -1,0 +1,145 @@
+ @use '../scss/resources' as c;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  font-size:14px;
+  font-family: 'Raleway', sans-serif;
+  background-size: cover;
+  height: 100vh;
+  background:c.color(main-bg);
+}
+
+a{text-decoration:none;}
+
+ul{list-style:none;}
+
+img{width:100%;}
+
+/*ultilities*/
+.flex-columns{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+/*navagetion*/
+
+#navbar{
+  /*padding:5rem;*/
+  padding:5rem 1rem;
+ 
+  .logo{
+    text-align: center;
+    width: 100%;
+    display:inline-block;
+  }
+  .main-nav{
+    //padding:1px;
+    li{
+     padding:0 4rem;
+     float: left;
+    }
+    a{
+      color:c.color(white-color);
+      font-size: 1rem;
+      transition:3s;
+      &:hover{
+        border-bottom:1px solid c.color(white-color);
+        transition:all 3s;
+      }
+    }
+  }
+}
+
+#hero{
+  height:100%;
+  .content{
+   padding:10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   z-index:1;
+   
+   background-size: cover;
+    img{
+      width: 700px;
+      margin:0 auto;
+      display:block;
+    }
+    h1{
+      color:c.color(white-color);
+      font-weight: 700;
+      font-size: 2rem;
+      width: 50%;
+    }
+    p{
+      width:30%;
+      color:c.color(white-color);
+      margin: 2rem;
+      line-height:1.5rem;
+      font-size:1rem;
+    }
+    @mixin buttton{
+      color: c.color(white-color);
+      background: c.color(cyan-color);
+      border: none;
+      border-radius:100px;
+    }
+    .btn{
+      @include buttton;
+      padding:1rem 7rem;
+    }
+  }
+} 
+
+section{
+  background-image:url(../images/bg-curvy-desktop.svg);
+  height:100%;
+  background-size:cover;
+  color:#fff;
+
+}
+@media(max-width:776px){
+  #navbar{
+    padding:2rem 1rem;
+   
+    .main-nav{
+      li{
+        padding:0;
+      }
+      a{
+        padding:0 5px;
+        font-size:12px;
+      }
+    }
+  }
+
+  #hero{
+    .content{
+      img{
+        width: 100%;
+      }
+      
+      h1{
+        font-size: 1.5rem;
+      }
+      h1,
+      p{
+        width:100%;
+      }
+    }
+  } 
+
+}
+
+@media(max-width:289px){
+  #navbar{
+    .logo{width: 95px;}
+  }
+}

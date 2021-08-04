@@ -1,0 +1,22 @@
+//colors
+$colors:(
+  main-bg: hsl(217, 28%, 15%),
+  footer-bg: hsl(216, 53%, 9%),
+  testimonials-bg: hsl(219, 30%, 18%),
+  //accent
+  cyan-color:hsl(176, 68%, 64%),
+  blue-color:hsl(198, 60%, 50%),
+  light-color:hsl(0, 100%, 63%),
+  //neutral
+  white-color:hsl(0, 0%, 100%)
+);
+
+@function color($colorr){
+  @return map-get($colors , $colorr)
+
+};
+
+.row{
+  max-width:1023px;
+  margin:0 auto;
+}
