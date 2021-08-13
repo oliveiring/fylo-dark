@@ -1,4 +1,6 @@
-//colors
+/*----------------*/
+      /*colors*/
+ /*----------------*/
 $colors:(
   main-bg: hsl(217, 28%, 15%),
   footer-bg: hsl(216, 53%, 9%),
@@ -8,15 +10,17 @@ $colors:(
   blue-color:hsl(198, 60%, 50%),
   light-color:hsl(0, 100%, 63%),
   //neutral
-  white-color:hsl(0, 0%, 100%)
+  white-color:hsl(0, 0%, 100%),
+  other-color:hsl(218, 28%, 13%)
 );
 
 @function color($colorr){
   @return map-get($colors , $colorr)
-
 };
-
+/*----------------*/
+   /*Ultilities*/
+ /*----------------*/
 .row{
-  max-width:1023px;
+  max-width:1150px;
   margin:0 auto;
 }

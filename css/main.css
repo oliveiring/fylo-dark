@@ -1,8 +1,17 @@
+/*----------------*/
+/*colors*/
+/*----------------*/
+/*----------------*/
+/*Ultilities*/
+/*----------------*/
 .row {
-  max-width: 1023px;
+  max-width: 1150px;
   margin: 0 auto;
 }
 
+/*----------------*/
+/*Set up*/
+/*----------------*/
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +21,9 @@
 body {
   font-size: 14px;
   font-family: "Raleway", sans-serif;
-  background-size: cover;
-  height: 100vh;
   background: #1c2431;
+  height: 100%;
+  color: white;
 }
 
 a {
@@ -29,22 +38,30 @@ img {
   width: 100%;
 }
 
-/*ultilities*/
-.flex-columns {
+/*----------------*/
+/*Ultilities*/
+/*----------------*/
+main {
+  background-color: #181f2a;
+  color: white;
+  position: relative;
+}
+
+/*----------------*/
+/*Navagetion*/
+/*----------------*/
+#navbar {
+  padding: 5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
-/*navagetion*/
-#navbar {
-  /*padding:5rem;*/
-  padding: 5rem 1rem;
-}
 #navbar .logo {
-  text-align: center;
-  width: 100%;
+  width: 100px;
   display: inline-block;
+}
+#navbar .main-nav {
+  padding: 1px;
 }
 #navbar .main-nav li {
   padding: 0 4rem;
@@ -60,18 +77,19 @@ img {
   transition: all 3s;
 }
 
-#hero {
-  height: 100%;
-}
+/*----------------*/
+/*Header*/
+/*----------------*/
 #hero .content {
+  z-index: 1;
   padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  z-index: 1;
-  background-size: cover;
+  background: url("../images/bg-curvy-desktop.svg") bottom no-repeat;
+  background-size: 100% 300px;
 }
 #hero .content img {
   width: 700px;
@@ -85,7 +103,7 @@ img {
   width: 50%;
 }
 #hero .content p {
-  width: 30%;
+  width: 40%;
   color: white;
   margin: 2rem;
   line-height: 1.5rem;
@@ -96,16 +114,228 @@ img {
   background: #65e2d9;
   border: none;
   border-radius: 100px;
-  padding: 1rem 7rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem 5rem;
 }
 
-section {
-  background-image: url(../images/bg-curvy-desktop.svg);
-  height: 100%;
-  background-size: cover;
-  color: #fff;
+/*----------------*/
+/*Product*/
+/*----------------*/
+#product {
+  padding: 2rem;
+}
+#product .plan {
+  padding-top: 4rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#product .plan .item {
+  padding-top: 4rem;
+}
+#product .plan .item img {
+  width: 80px;
+  padding: 1rem 0;
+}
+#product .plan .item p {
+  padding: 2rem;
+  line-height: 1.5rem;
+  text-align: center;
+  width: 26rem;
+  color: white;
+}
+#product .plan .item h3 {
+  font-weight: 900;
+  font-size: 1.3rem;
 }
 
+/*----------------*/
+/*Productive*/
+/*----------------*/
+#productive .showcase-productive {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#productive .showcase-productive .item {
+  padding-left: 3rem;
+}
+#productive .showcase-productive .item img {
+  width: 550px;
+}
+#productive .showcase-productive .item:last-child h2 {
+  font-size: 2rem;
+}
+#productive .showcase-productive .item:last-child p {
+  padding: 1.3rem 0;
+  line-height: 1.7rem;
+}
+#productive .showcase-productive .item:last-child a {
+  color: #65e2d9;
+  border-bottom: 1px solid #65e2d9;
+  padding-bottom: 2px;
+}
+#productive .showcase-productive .item:last-child a img {
+  width: 1rem;
+}
+
+/*----------------*/
+/*Testimonial*/
+/*----------------*/
+#testimonial {
+  display: flex;
+  flex-direction: row;
+  padding: 10rem 4rem;
+  padding-bottom: 20rem;
+  position: relative;
+}
+#testimonial .quote {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 17%;
+}
+#testimonial .box {
+  background: #202a3c;
+  padding: 3rem 1rem;
+  margin-right: 2rem;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px #161515;
+  z-index: 1;
+}
+#testimonial .box .text {
+  padding-bottom: 2rem;
+}
+#testimonial .box .text p {
+  line-height: 1.5rem;
+}
+#testimonial .box .user {
+  display: flex;
+  align-items: center;
+}
+#testimonial .box .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+#testimonial .box .user div p {
+  font-size: 0.6rem;
+}
+
+/*----------------*/
+/*Subscript*/
+/*----------------*/
+.subscript {
+  background: #1c2431;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 700px;
+  margin-top: 3rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7%;
+}
+.subscript .item-1 {
+  padding: 1rem 0;
+}
+.subscript .item-1 h2 {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.subscript .item-1 p {
+  line-height: 1.5rem;
+}
+.subscript .item-2 {
+  display: flex;
+}
+.subscript .item-2 input[type=email] {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 50px;
+  border: none;
+}
+.subscript .item-2 input[type=submit] {
+  color: white;
+  background: #65e2d9;
+  border: none;
+  border-radius: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+/*----------------*/
+/*Footer*/
+/*----------------*/
+#footer {
+  padding: 9rem 0;
+  background: #0b1523;
+}
+#footer .main-footer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+  margin-top: 10rem;
+}
+#footer .main-footer .item:nth-child(1) img {
+  width: 150px;
+}
+#footer .main-footer .item:nth-child(1) div,
+#footer .main-footer .item:nth-child(2) div {
+  display: flex;
+  margin-top: 1rem;
+}
+#footer .main-footer .item:nth-child(1) div img,
+#footer .main-footer .item:nth-child(2) div img {
+  width: 20px;
+  margin-right: 1rem;
+}
+#footer .main-footer .item:nth-child(3) ul li,
+#footer .main-footer .item:nth-child(4) ul li {
+  padding: 1rem;
+}
+#footer .main-footer .item:nth-child(3) ul li a,
+#footer .main-footer .item:nth-child(4) ul li a {
+  color: white;
+}
+#footer .main-footer .item:nth-child(5) {
+  display: flex;
+}
+#footer .main-footer .item:nth-child(5) ul {
+  display: flex;
+}
+#footer .main-footer .item:nth-child(5) ul li a i {
+  border: 1px solid white;
+  color: white;
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 1.6em;
+  font-size: 1.4rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  transition: all 1s;
+}
+#footer .main-footer .item:nth-child(5) ul li a .fa-facebook-f:hover {
+  background: #1877F2;
+}
+#footer .main-footer .item:nth-child(5) ul li a .fa-twitter:hover {
+  background: #1DA1F2;
+}
+#footer .main-footer .item:nth-child(5) ul li a .fa-instagram:hover {
+  background: #E4405F;
+}
+
+/*----------------*/
+/*Medies Queries*/
+/*----------------*/
 @media (max-width: 776px) {
   #navbar {
     padding: 2rem 1rem;
@@ -115,9 +345,15 @@ section {
   }
   #navbar .main-nav a {
     padding: 0 5px;
-    font-size: 12px;
   }
 
+  #hero {
+    height: 50%;
+  }
+  #hero .content {
+    background: url("../images/bg-curvy-mobile.svg") bottom no-repeat;
+    background-size: 100% 150px;
+  }
   #hero .content img {
     width: 100%;
   }
@@ -128,10 +364,94 @@ section {
 #hero .content p {
     width: 100%;
   }
+
+  #product {
+    padding: 2rem;
+  }
+  #product .plan {
+    padding-top: 3rem;
+    width: 100%;
+    flex-direction: column;
+  }
+  #product .plan .item {
+    padding-top: 3rem;
+  }
+  #product .plan .item p {
+    padding: 2rem 0.3rem;
+    width: 100%;
+  }
+
+  .subscript {
+    padding: 1rem;
+  }
+  .subscript .item-1 {
+    padding: 1rem 0;
+  }
+  .subscript .item-1 h2 {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+  .subscript .item-1 p {
+    line-height: 1.5rem;
+  }
+  .subscript .item-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .subscript .item-2 input[type=submit] {
+    color: white;
+    background: #65e2d9;
+    border: none;
+    border-radius: 100px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
+
+  #footer .main-footer {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+  #footer .main-footer .item:nth-child(1) div,
+#footer .main-footer .item:nth-child(2) div {
+    display: flex;
+    margin-top: 1rem;
+  }
+  #footer .main-footer .item:nth-child(5) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #testimonial {
+    flex-direction: column;
+    padding: 20rem 1rem;
+  }
+  #testimonial .quote {
+    top: 22%;
+  }
+  #testimonial .box {
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+
+  #productive {
+    background: #181f2a;
+  }
+  #productive .showcase-productive {
+    flex-direction: column;
+  }
+  #productive .showcase-productive .item img {
+    width: 100%;
+  }
+  #productive .showcase-productive .item h2 {
+    font-size: 1rem;
+  }
 }
 @media (max-width: 289px) {
-  #navbar .logo {
-    width: 95px;
+  #navbar .main-nav a {
+    font-size: 11px;
   }
 }
 

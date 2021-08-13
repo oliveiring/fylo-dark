@@ -1,3 +1,6 @@
+ /*----------------*/
+      /*Set up*/
+ /*----------------*/
  @use '../scss/resources' as c;
 
 *{
@@ -8,9 +11,9 @@
 body{
   font-size:14px;
   font-family: 'Raleway', sans-serif;
-  background-size: cover;
-  height: 100vh;
   background:c.color(main-bg);
+  height: 100%;
+  color:c.color(white-color);
 }
 
 a{text-decoration:none;}
@@ -18,27 +21,49 @@ a{text-decoration:none;}
 ul{list-style:none;}
 
 img{width:100%;}
-
-/*ultilities*/
-.flex-columns{
+/*----------------*/
+    /*Ultilities*/
+ /*----------------*/
+@mixin flex-columns{
   display:flex;
   justify-content:space-between;
   align-items: center;
 }
 
-/*navagetion*/
+@mixin flex-items{
+  display:flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+@mixin buttton{
+  color: c.color(white-color);
+  background: c.color(cyan-color);
+  border: none;
+  border-radius:100px;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+main {
+  background-color: c.color(other-color);
+  color: c.color(white-color);
+  position:relative;
+}
+
+/*----------------*/
+   /*Navagetion*/
+ /*----------------*/
 
 #navbar{
-  /*padding:5rem;*/
   padding:5rem 1rem;
- 
+  @include flex-columns;
   .logo{
-    text-align: center;
-    width: 100%;
+    width:100px;
     display:inline-block;
   }
   .main-nav{
-    //padding:1px;
+    padding:1px;
     li{
      padding:0 4rem;
      float: left;
@@ -55,18 +80,23 @@ img{width:100%;}
   }
 }
 
+/*----------------*/
+    /*Header*/
+ /*----------------*/
 #hero{
-  height:100%;
   .content{
+  z-index: 1;
    padding:10px;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
    text-align: center;
-   z-index:1;
+
+   background:url('../images/bg-curvy-desktop.svg') bottom no-repeat;
+   background-size:100% 300px;
    
-   background-size: cover;
+   
     img{
       width: 700px;
       margin:0 auto;
@@ -79,67 +109,356 @@ img{width:100%;}
       width: 50%;
     }
     p{
-      width:30%;
+      width:40%;
       color:c.color(white-color);
       margin: 2rem;
       line-height:1.5rem;
       font-size:1rem;
     }
-    @mixin buttton{
-      color: c.color(white-color);
-      background: c.color(cyan-color);
-      border: none;
-      border-radius:100px;
-    }
     .btn{
       @include buttton;
-      padding:1rem 7rem;
+      padding:1rem 5rem;
     }
   }
 } 
-
-section{
-  background-image:url(../images/bg-curvy-desktop.svg);
-  height:100%;
-  background-size:cover;
-  color:#fff;
-
+/*----------------*/
+    /*Product*/
+ /*----------------*/
+#product{
+  padding:2rem;
+  .plan{
+  padding-top:4rem;
+  width: 100%;
+  text-align: center;
+  @include flex-items;
+    .item{
+      padding-top: 4rem;
+      img{
+        width: 80px;
+        padding: 1rem 0;
+      }
+      p{
+        padding:2rem;
+        line-height:1.5rem;
+        text-align: center;
+        width:26rem;
+        color: c.color(white-color);
+      }
+      h3{
+        font-weight:900;
+        font-size:1.3rem;
+      }
+    }
+  }
 }
-@media(max-width:776px){
-  #navbar{
-    padding:2rem 1rem;
-   
-    .main-nav{
-      li{
-        padding:0;
+/*----------------*/
+    /*Productive*/
+ /*----------------*/
+#productive{
+  .showcase-productive{
+    @include flex-items;
+    .item{
+      padding-left: 3rem;
+
+      img{width: 550px;}
+    }
+    .item:last-child{
+      h2{font-size:2rem;}
+
+      p{
+        padding: 1.3rem 0;
+        line-height:1.7rem;
       }
       a{
-        padding:0 5px;
-        font-size:12px;
+        color:c.color(cyan-color);
+        border-bottom:1px solid c.color(cyan-color);
+        padding-bottom:2px;
+        img{width:1rem;}
       }
     }
   }
+}
+/*----------------*/
+   /*Testimonial*/
+ /*----------------*/
+#testimonial{
+  display: flex;
+  flex-direction: row;
+  padding:10rem 4rem;
+  padding-bottom: 20rem;
+  position: relative;
+  .quote{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 17%;
+  }
+  .box{
+    background: c.color(testimonials-bg);
+    padding: 3rem 1rem;
+    margin-right: 2rem;
+    border-radius: 3px;
+    box-shadow:3px 3px 3px rgb(22, 21, 21);
+    z-index:1;
+    .text{
+      padding-bottom:2rem;
 
-  #hero{
-    .content{
-      img{
-        width: 100%;
-      }
-      
-      h1{
-        font-size: 1.5rem;
-      }
-      h1,
-      p{
-        width:100%;
-      }
+      p{line-height:1.5rem;}
     }
-  } 
-
+    .user{
+      display: flex;
+      align-items: center;
+      img{
+      
+        width:30px;
+        height:30px;
+        border-radius:50%;
+        margin-right:1rem;
+      }
+      div p{font-size: 0.6rem;}
+    }
+  }
 }
 
+/*----------------*/
+    /*Subscript*/
+ /*----------------*/
+.subscript{
+  background:c.color(main-bg);
+  padding:2rem;
+  margin:0 auto;
+  max-width:700px;
+  margin-top: 3rem;
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:-7%;
+  .item-1{
+    padding:1rem 0;
+    h2{
+      padding:1rem 0;
+      text-align:center;
+      font-size:2rem;
+    }
+    p{
+      line-height:1.5rem;
+    }
+  }
+  .item-2{
+    display:flex;
+    input[type=email]{
+      width:100%;
+      padding: 1rem;
+      border-radius:50px;
+      border: none;
+    }
+    input[type=submit]{
+      @include buttton;
+      padding:1rem;
+      margin-left:1rem;
+      //margin:1rem 0;
+    }
+  }
+}
+/*----------------*/
+    /*Footer*/
+ /*----------------*/
+
+#footer{
+  padding:9rem 0;
+  background:c.color(footer-bg);
+  .main-footer{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    grid-gap:1rem;
+    margin-top:10rem;
+    .item:nth-child(1){
+      img{width: 150px;}
+    }
+    .item:nth-child(1),
+    .item:nth-child(2){
+      div{
+        display: flex;
+        margin-top:1rem;
+        img{
+          width: 20px;
+          margin-right:1rem;
+        }
+      }
+    }
+
+    .item:nth-child(3),
+    .item:nth-child(4){
+      ul{
+        li{
+          padding: 1rem;
+
+         a{color:c.color(white-color);}
+        }
+      }
+    }
+
+    .item:nth-child(5){
+      display: flex;
+      ul{
+        display: flex;
+        li a i{
+        border:1px solid c.color(white-color);
+        color: c.color(white-color);
+        height:40px;
+        width:40px;
+        text-align:center;
+        line-height: 1.6em;
+        font-size:1.4rem;
+        border-radius: 50%;
+        margin-right:1rem;
+        transition:all 1s;
+        }
+        li a .fa-facebook-f:hover{background:#1877F2;}
+
+        li a .fa-twitter:hover{background:#1DA1F2;}
+
+        li a .fa-instagram:hover{background:#E4405F;}
+      }
+       
+    }
+    
+  }
+ 
+}
+/*----------------*/
+ /*Medies Queries*/
+ /*----------------*/
+@media(max-width:776px){
+  //Navegation
+  #navbar{padding:2rem 1rem;
+    .main-nav{
+      li{ padding:0;}
+
+      a{padding:0 5px;}
+    }
+  }
+  //Header
+  #hero{
+    height: 50%;
+    .content{
+      background:url('../images/bg-curvy-mobile.svg') bottom no-repeat;
+     background-size:100% 150px;
+      img{width: 100%;}
+      
+      h1{font-size: 1.5rem;}
+
+      h1,
+      p{width:100%;}
+    }
+  }
+  //Ultilities
+  @mixin flex-items{flex-direction:column;}
+  //product
+  #product{
+   padding: 2rem;
+    .plan{
+    padding-top:3rem;
+    width: 100%;
+    @include flex-items;
+      .item{
+        padding-top:3rem;
+        p{
+          padding:2rem 0.3rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  //Subscript
+  .subscript{
+    padding:1rem;
+   
+    .item-1{
+      padding:1rem 0;
+      h2{
+        padding:1rem 0;
+        text-align:center;
+        font-size:2rem;
+      }
+      p{line-height:1.5rem;}
+    }
+    .item-2{
+      flex-direction:column;
+      align-items: center;
+
+      input[type=submit]{
+        @include buttton;
+        margin-top:1rem;
+      }
+    }
+  }
+  //footer
+  #footer{
+    .main-footer{
+      grid-template-columns:1fr;
+      padding:1rem;
+      .item:nth-child(1),
+      .item:nth-child(2){
+        div{
+          display: flex;
+          margin-top:1rem;
+        }
+      }
+  
+      .item:nth-child(5){
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+      }
+    }
+  }
+  //Testimonial
+  #testimonial{
+    @include flex-items;
+    padding:20rem 1rem;
+    .quote{top:22%;}
+
+    .box{
+      margin-top: 1rem;
+      margin-right: 0;
+    }
+  }
+ 
+
+  //Productive
+  #productive{
+    background:c.color(other-color);  
+    .showcase-productive{
+      @include flex-items;
+  
+      .item{
+        img{width:100%;}
+
+        h2{ font-size: 1rem;}
+      }
+    }
+  }
+}
+
+//small screen less than 289
 @media(max-width:289px){
   #navbar{
-    .logo{width: 95px;}
+    .main-nav{
+      a{font-size: 11px;}
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
