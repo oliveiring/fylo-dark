@@ -38,7 +38,7 @@ img{width:100%;}
 
 @mixin buttton{
   color: c.color(white-color);
-  background: c.color(cyan-color);
+  background:linear-gradient(c.color(cyan-color) ,c.color(blue-color));
   border: none;
   border-radius:100px;
   font-weight: bold;
@@ -246,20 +246,20 @@ main {
   }
   .item-2{
     display:flex;
-    input[type=email]{
-      width:100%;
-      padding: 1rem;
-      border-radius:50px;
-      border: none;
-    }
-    input[type=submit]{
-      @include buttton;
-      padding:1rem;
-      margin-left:1rem;
-      //margin:1rem 0;
+      input[type=email]{
+        width:100%;
+        padding: 1rem;
+        border-radius:50px;
+        border: none;
+        outline:none;
+      }
+      input[type=submit]{
+        @include buttton;
+        padding:1rem;
+        margin-left:1rem;
+      }
     }
   }
-}
 /*----------------*/
     /*Footer*/
  /*----------------*/
@@ -418,7 +418,7 @@ main {
   #testimonial{
     @include flex-items;
     padding:20rem 1rem;
-    .quote{top:22%;}
+    .quote{top:21%;}
 
     .box{
       margin-top: 1rem;

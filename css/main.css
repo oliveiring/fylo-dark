@@ -111,7 +111,7 @@ main {
 }
 #hero .content .btn {
   color: white;
-  background: #65e2d9;
+  background: linear-gradient(#65e2d9, #339ecc);
   border: none;
   border-radius: 100px;
   font-weight: bold;
@@ -259,10 +259,11 @@ main {
   padding: 1rem;
   border-radius: 50px;
   border: none;
+  outline: none;
 }
 .subscript .item-2 input[type=submit] {
   color: white;
-  background: #65e2d9;
+  background: linear-gradient(#65e2d9, #339ecc);
   border: none;
   border-radius: 100px;
   font-weight: bold;
@@ -401,7 +402,7 @@ main {
   }
   .subscript .item-2 input[type=submit] {
     color: white;
-    background: #65e2d9;
+    background: linear-gradient(#65e2d9, #339ecc);
     border: none;
     border-radius: 100px;
     font-weight: bold;
@@ -429,7 +430,7 @@ main {
     padding: 20rem 1rem;
   }
   #testimonial .quote {
-    top: 22%;
+    top: 21%;
   }
   #testimonial .box {
     margin-top: 1rem;
