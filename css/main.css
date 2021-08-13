@@ -427,7 +427,7 @@ main {
 
   #testimonial {
     flex-direction: column;
-    padding: 20rem 1rem;
+    padding: 15rem 1rem;
   }
   #testimonial .quote {
     top: 21%;
