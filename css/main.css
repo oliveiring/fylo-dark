@@ -428,9 +428,10 @@ main {
   #testimonial {
     flex-direction: column;
     padding: 15rem 1rem;
+    position: absolute;
   }
   #testimonial .quote {
-    top: 21%;
+    top: 22%;
   }
   #testimonial .box {
     margin-top: 1rem;

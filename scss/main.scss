@@ -418,7 +418,8 @@ main {
   #testimonial{
     @include flex-items;
     padding:15rem 1rem;
-    .quote{top:21%;}
+    position: absolute;
+    .quote{top:22%;}
 
     .box{
       margin-top: 1rem;
