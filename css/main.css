@@ -382,6 +382,32 @@ main {
     width: 100%;
   }
 
+  #footer {
+    padding: 9rem 1rem;
+  }
+  #footer .main-footer {
+    grid-template-columns: 1fr;
+    margin-top: 10rem;
+  }
+  #footer .main-footer .item:nth-child(5) {
+    justify-content: center;
+  }
+
+  #testimonial {
+    flex-direction: column;
+    padding: 13rem 1rem;
+    margin-top: 1rem;
+  }
+  #testimonial .quote {
+    position: absolute;
+    top: 18%;
+  }
+  #testimonial .box {
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-right: 0;
+  }
+
   .subscript {
     padding: 1rem;
   }
@@ -410,39 +436,14 @@ main {
     margin-top: 1rem;
   }
 
-  #footer .main-footer {
-    grid-template-columns: 1fr;
-    padding: 1rem;
-  }
-  #footer .main-footer .item:nth-child(1) div,
-#footer .main-footer .item:nth-child(2) div {
-    display: flex;
-    margin-top: 1rem;
-  }
-  #footer .main-footer .item:nth-child(5) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #testimonial {
-    flex-direction: column;
-    padding: 15rem 1rem;
-    position: absolute;
-  }
-  #testimonial .quote {
-    top: 22%;
-  }
-  #testimonial .box {
-    margin-top: 1rem;
-    margin-right: 0;
-  }
-
   #productive {
     background: #181f2a;
   }
   #productive .showcase-productive {
     flex-direction: column;
+  }
+  #productive .showcase-productive .item {
+    padding-left: 1rem;
   }
   #productive .showcase-productive .item img {
     width: 100%;
