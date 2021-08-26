@@ -209,7 +209,7 @@ main {
 #testimonial .box .text {
   padding-bottom: 2rem;
 }
-#testimonial .box .text p {
+#testimonial .box .text blockquote {
   line-height: 1.5rem;
 }
 #testimonial .box .user {
