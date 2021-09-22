@@ -392,6 +392,10 @@ main {
   #footer .main-footer .item:nth-child(5) {
     justify-content: center;
   }
+  #footer .main-footer .item:nth-child(3) ul li,
+#footer .main-footer .item:nth-child(4) ul li {
+    padding: 1rem 0;
+  }
 
   #testimonial {
     flex-direction: column;

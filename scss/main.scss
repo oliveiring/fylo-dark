@@ -289,12 +289,9 @@ main {
 
     .item:nth-child(3),
     .item:nth-child(4){
-      ul{
-        li{
+      ul li{
           padding: 1rem;
-
          a{color:c.color(white-color);}
-        }
       }
     }
 
@@ -378,8 +375,14 @@ main {
       margin-top:10rem;
 
       .item:nth-child(5){justify-content: center;}
-  
+
+    .item:nth-child(3),
+    .item:nth-child(4){
+      ul li{
+        padding:1rem 0;
+      }
     }
+  }
    
   }
   //Testimonial
@@ -435,7 +438,6 @@ main {
           width:100%;
          
         }
-
         h2{ font-size: 1rem;}
       }
     }
