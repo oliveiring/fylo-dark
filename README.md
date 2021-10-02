@@ -9,7 +9,7 @@
  <h2>Tools 🛠</h2>
   
  <ul>
-  <li>HTML5</li>
+  <li>HTML</li>
   <li>SCSS</li>
 </ul>
 
