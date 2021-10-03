@@ -9,8 +9,8 @@
  <h2>Tools 🛠</h2>
   
  <ul>
-  <li>HTML</li>
-  <li>SCSS</li>
+  <li> HTML</li>
+  <li> SCSS</li>
 </ul>
 
 [Test here](https://brave-kare-00ba0e.netlify.app/)
